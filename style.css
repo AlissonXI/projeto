@@ -1,0 +1,848 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background-color: #111; /* Preto */
+    color: #fff; /* Branco */
+    line-height: 1.6;
+    overflow-x: hidden; /* Remove a barra de rolagem horizontal */
+}
+
+/* Header */
+.header {
+    background: linear-gradient(to right, #333, #000);
+    padding: 10px 0;
+    width: 100%;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand {
+    color: #FFA500; /* Laranja */
+    font-weight: bold; /* Adiciona negrito à marca */
+    text-decoration: none; /* Remove o sublinhado do link */
+}
+
+.navbar-brand img {
+    margin-left: -90px;
+}
+
+.navbar-nav {
+    color: #fff; /* Branco */
+    list-style: none; /* Remove os marcadores da lista */
+    padding: 0; /* Remove o espaçamento interno da lista */
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: #fff; /* Branco */
+    font-weight: 500;
+    transition: color 0.3s;
+    text-decoration: none; /* Remove o sublinhado do link */
+    padding: 10px 15px; /* Adiciona espaçamento para melhor visualização */
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: #007bff; /* Azul Escuro */
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(to right, #007bff, #004080, #111);
+    background-size: cover;
+    background-position: center;
+    padding: 150px 0;
+    text-align: center;
+    color: #fff; /* Branco */
+    position: relative; /* Permite posicionar elementos dentro da seção */
+}
+
+.hero-title {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.hero-text {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    line-height: 1.8; /* Aumenta o espaçamento entre linhas para melhor legibilidade */
+}
+
+.hero-image {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Seções */
+.section-title {
+    font-size: 2.5rem;
+    color: #007bff; /* Azul Escuro */
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: bold;
+    position: relative; /* Permite adicionar elementos como linhas abaixo do título */
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 2px;
+    background-color: #007bff; /* Azul Escuro */
+}
+
+.cursos-section,
+.sobre-nos-section,
+.equipe-expectativa-section,
+.depoimentos-section,
+.contato-section {
+    padding: 50px 0;
+    background: linear-gradient(to right, #007bff, #004080, #111);
+    color: #fff; /* Branco */
+}
+
+/* Cards (Para os cursos) */
+.cursos-section {
+    display: flex; /* Usa Flexbox */
+    flex-wrap: wrap; /* Permite que os cards quebrem em múltiplas linhas */
+    justify-content: center; /* Centraliza os cards horizontalmente */
+    gap: 20px; /* Espaçamento entre os cards */
+}
+
+.cursos-section .card {
+    border: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: #222; /* Cinza bem escuro */
+    color: #fff; /* Branco */
+    width: 300px; /* Define a largura dos cards */
+    flex: 1; /* Usa flex: 1 para permitir que os cards se ajustem ao espaço disponível */
+    min-width: 250px; /* Define a largura mínima dos cards para evitar que fiquem muito pequenos */
+    text-align: center; /* Centraliza o conteúdo do card */
+}
+
+.cursos-section .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.cursos-section .card-img-top {
+    height: 250px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.cursos-section .card-body {
+    padding: 20px;
+}
+
+.cursos-section .card-title {
+    color: #007bff; /* Azul Escuro */
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.cursos-section .badge {
+    background-color: #FFA500;
+    color: #111; /* Preto */
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.cursos-section .card-text {
+    margin-bottom: 15px;
+    line-height: 1.5; /* Aumenta o espaçamento entre linhas para melhor legibilidade */
+}
+
+.cursos-section .saiba-mais {
+    background-color: #007bff; /* Azul Escuro */
+    color: #111; /* Preto */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-weight: bold; /* Adiciona negrito ao botão */
+}
+
+.cursos-section .saiba-mais:hover {
+    background-color: #006994; /* Azul Escuro Mais Intenso */
+}
+
+/* Depoimentos */
+.depoimentos-section .depoimento {
+    background-color: #222; /* Cinza bem escuro */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    text-align: center;
+    color: #fff; /* Branco */
+}
+
+.depoimentos-section .nome-depoimento {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Footer */
+.footer {
+    background-color: #111; /* Preto */
+    color: #fff; /* Branco */
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centraliza os links */
+    margin-bottom: 10px;
+    gap: 15px;
+}
+
+.social-links a {
+    color: #fff; /* Cor dos links */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    font-size: 1.5rem; /* Aumenta o tamanho dos ícones */
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #007bff; /* Azul Escuro */
+}
+
+/* Button */
+.btn-primary {
+    background-color: #FFA500; /* Laranja */
+    color: #111; /* Preto */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    text-decoration: none;
+    font-weight: bold; /* Adiciona negrito ao botão */
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #cc8800; /* Laranja Mais Intenso */
+}
+
+/* Modal de Login */
+#loginModal .modal-content {
+    background-color: #fff; /* Branco */
+    color: #333; /* Preto */
+    border: none;
+    border-radius: 10px;
+}
+
+#loginModal .modal-title {
+    color: #007bff; /* Azul Escuro */
+    font-weight: bold; /* Adiciona negrito ao título */
+}
+
+#loginModal .close {
+    color: #333; /* Preto */
+}
+
+#criarContaModal .modal-content {
+    background-color: #fff; /* Branco */
+    color: #333; /* Preto */
+    border: none;
+    border-radius: 10px;
+}
+
+#criarContaModal .modal-title {
+    color: #007bff; /* Azul Escuro */
+    font-weight: bold; /* Adiciona negrito ao título */
+}
+
+#criarContaModal .close {
+    color: #333; /* Preto */
+}
+
+#cursoModal .modal-content {
+    background-color: #fff; /* Branco */
+    color: #333; /* Preto */
+    border: none;
+    border-radius: 10px;
+}
+
+#cursoModal .modal-title {
+    color: #007bff; /* Azul Escuro */
+    font-weight: bold; /* Adiciona negrito ao título */
+}
+
+#cursoModal .close {
+    color: #333; /* Preto */
+}
+
+
+/* Scroll to Top Button */
+#scrollToTopButton {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+    border: none;
+    outline: none;
+    background-color: #FFA500; /* Laranja */
+    color: #111; /* Preto */
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+#scrollToTopButton:hover {
+    opacity: 1;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .header .container,
+    .hero-section .container,
+    .footer .container {
+        flex-direction: column;
+        align-items: flex-start; /* Alinha o conteúdo na parte superior */
+    }
+    .header .navbar-nav,
+    .footer .social-links {
+        margin-top: 10px;
+    }
+
+    .hero-section {
+        padding: 50px 0;
+        text-align: left; /* Alinha o texto da seção do herói à esquerda */
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-text {
+        font-size: 1rem;
+    }
+
+    .hero-section .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-section .col-md-6 {
+        width: 100%;
+    }
+
+    .hero-image {
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    .cursos-section .card {
+        height: auto;
+        width: calc(50% - 10px); /* Ajusta a largura dos cards para telas menores */
+        margin-right: 10px;
+    }
+
+    .contato-content {
+        text-align: left; /* Alinha o texto da seção de contato à esquerda */
+    }
+}
+
+@media (max-width: 576px) {
+    .cursos-container .swiper-slide {
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .cursos-container .card {
+        border: none;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        transition: transform 0.3s, box-shadow 0.3s;
+        background-color: #222; /* Cinza bem escuro */
+        color: #fff; /* Branco */
+        margin-bottom: 20px;
+        height: 350px; /* Reduz a altura dos cards */
+        width: calc(100% - 20px); /* Ajusta a largura dos cards para telas menores */
+    }
+
+    .cursos-container .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .cursos-container .card-img-top {
+        height: 200px; /* Reduz a altura das imagens */
+        object-fit: cover;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    .cursos-container .card-body {
+        padding: 15px;
+        background-color: #222; /* Cinza bem escuro */
+    }
+
+    .cursos-container .card-title {
+        color: #007bff; /* Azul Escuro */
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+
+    .cursos-container .badge {
+        background-color: #FFA500;
+        color: #111; /* Preto */
+        margin-bottom: 10px;
+        padding: 5px 10px;
+        border-radius: 20px;
+        font-size: 0.9rem;
+    }
+
+    .cursos-container .card-text {
+        margin-bottom: 15px;
+    }
+
+    .cursos-section .saiba-mais {
+        background-color: #007bff; /* Azul Escuro */
+        color: #111; /* Preto */
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+        text-decoration: none;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .cursos-section .saiba-mais:hover {
+        background-color: #006994; /* Azul Escuro Mais Intenso */
+    }
+
+/* Seção de Depoimentos */
+.depoimentos-section {
+    background-color: #111; /* Preto */
+    color: #fff; /* Branco */
+}
+
+.depoimentos-section .depoimento {
+    background-color: #222; /* Cinza bem escuro */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    text-align: center;
+    color: #fff; /* Branco */
+}
+
+/* Seção de Contato */
+.contato-section {
+    background-color: #111; /* Preto */
+    color: #fff; /* Branco */
+    padding: 50px 0;
+    text-align: center;
+}
+
+.contato-section .contato-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contato-section .contato-content i {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #fff; /* Branco */
+}
+
+.contato-section .contato-content p {
+    margin-bottom: 20px;
+    color: #fff; /* Branco */
+}
+
+/* Estilos para o formulário de login */
+#loginModal .form-group {
+    margin-bottom: 15px;
+}
+
+#loginModal .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold; /* Adiciona negrito ao label */
+}
+
+#loginModal .form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#loginModal .form-group input:focus {
+    outline: none;
+    border-color: #007bff; /* Azul Escuro */
+}
+
+#loginModal .btn-primary {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff; /* Azul Escuro */
+    color: #fff; /* Branco */
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: bold; /* Adiciona negrito ao botão */
+}
+
+#loginModal .btn-primary:hover {
+    background-color: #006994; /* Azul Escuro Mais Intenso */
+}
+
+/* Estilos para os Modais */
+.modal-dialog {
+    max-width: 80%;
+    margin: 1.75rem auto;
+}
+
+.modal-content {
+    background-color: #fff; /* Branco */
+    color: #333; /* Preto */
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header {
+    background-color: #007bff; /* Azul Escuro */
+    color: #fff; /* Branco */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.modal-header h5 {
+    font-weight: bold;
+    color: #333; /* Define a cor do título dos modais para preto */
+}
+
+.modal-body {
+    padding: 20px;
+    color: #333; /* Define a cor do texto dos modais para preto */
+}
+
+.modal-body h2, 
+.modal-body h3, 
+.modal-body h4 {
+    font-weight: bold;
+    margin-top: 20px;
+    color: #333; /* Define a cor do texto dos modais para preto */
+}
+
+.modal-body ul {
+    list-style: disc;
+    margin-left: 30px;
+    padding-left: 0;
+    margin-top: 15px;
+    color: #333; /* Define a cor do texto dos modais para preto */
+}
+
+.modal-body li {
+    margin-bottom: 5px;
+    color: #333; /* Define a cor do texto dos modais para preto */
+}
+
+.modal-footer {
+    background-color: #f4f4f4;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 15px 20px;
+    color: #333; /* Define a cor do texto dos modais para preto */
+}
+
+/* Estilos para a paginação do Swiper com setas */
+.swiper-button-prev,
+.swiper-button-next {
+    color: #fff; /* Cor das setas */
+    background-color: transparent;
+    opacity: 0.8;
+    padding: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10; /* Garante que as setas fiquem sobre os cards */
+}
+
+.swiper-button-prev {
+    left: -50px; /* Ajusta a posição da seta esquerda para a esquerda */
+}
+
+.swiper-button-next {
+    right: 40px;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    opacity: 1;
+}
+
+/* Estilos para o formulário de criar conta */
+#criarContaModal .form-group label {
+    color: #333; /* Define a cor do label dos modais para preto */
+}
+
+/* Ajustando o layout da seção de contato */
+.contato-section .contato-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contato-section .contato-content i {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #fff; /* Branco */
+}
+
+.contato-section .contato-content p {
+    margin-bottom: 20px;
+    color: #fff; /* Branco */
+}
+
+/* Hover azul para o ícone do Instagram */
+.contato-section .contato-content a i {
+    transition: color 0.3s ease;
+}
+
+.contato-section .contato-content a i:hover {
+    color: #007bff; /* Azul Escuro */
+}
+
+/* Animações */
+.hero-text, .section-title, .sobre-nos-content, .equipe-expectativa-content, .contato-content {
+    animation: fadeInUp 1s ease-in-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilos para o Swiper */
+.swiper-container {
+    width: 100%;
+    height: auto;
+    margin-bottom: 50px;
+}
+
+.swiper-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.swiper-slide {
+    width: 300px;
+    text-align: center;
+}
+
+.mySwiperCursos .swiper-slide {
+    width: calc(25% - 10px); /* Ajuste a largura dos slides */
+    flex: 0 0 calc(25% - 10px); /* Ajuste a largura dos slides */
+}
+
+.mySwiperCursos .swiper-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.mySwiperCursos .swiper-button-prev,
+.mySwiperCursos .swiper-button-next {
+    color: #fff; /* Cor das setas */
+    background-color: transparent;
+    opacity: 0.8;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10; /* Garante que as setas fiquem sobre os cards */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.mySwiperCursos .swiper-button-prev {
+    left: 20px; /* Posição da seta anterior */
+}
+
+.mySwiperCursos .swiper-button-next {
+    right: 20px; /* Posição da seta próxima */
+}
+
+.mySwiperCursos .swiper-button-prev:hover,
+.mySwiperCursos .swiper-button-next:hover {
+    opacity: 1;
+}
+
+/* Responsividade do Swiper */
+@media (max-width: 1024px) {
+    .mySwiperCursos .swiper-slide {
+        width: calc(33.33% - 10px); /* Ajuste a largura dos slides */
+        flex: 0 0 calc(33.33% - 10px); /* Ajuste a largura dos slides */
+    }
+}
+
+@media (max-width: 768px) {
+    .mySwiperCursos .swiper-slide {
+        width: calc(50% - 10px); /* Ajuste a largura dos slides */
+        flex: 0 0 calc(50% - 10px); /* Ajuste a largura dos slides */
+    }
+}
+
+@media (max-width: 576px) {
+    .mySwiperCursos .swiper-slide {
+        width: calc(100% - 20px); /* Ajuste a largura dos slides */
+        flex: 0 0 calc(100% - 20px); /* Ajuste a largura dos slides */
+    }
+}
+
+/* Estilos para a paginação do Swiper com setas */
+.swiper-button-prev,
+.swiper-button-next {
+    color: #fff; /* Cor das setas */
+    background-color: transparent;
+    opacity: 0.8;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10; /* Garante que as setas fiquem sobre os cards */
+}
+
+.swiper-button-prev {
+    left: -50px; /* Ajusta a posição da seta esquerda para a esquerda */
+}
+
+.swiper-button-next {
+    right: 40px;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    opacity: 1;
+}
+
+/* Estilos para o formulário de criar conta */
+#criarContaModal .form-group label {
+    color: #333; /* Define a cor do label dos modais para preto */
+}
+
+/* Ajustando o layout da seção de contato */
+.contato-section .contato-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contato-section .contato-content i {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #fff; /* Branco */
+}
+
+.contato-section .contato-content p {
+    margin-bottom: 20px;
+    color: #fff; /* Branco */
+}
+
+/* Hover azul para o ícone do Instagram */
+.contato-section .contato-content a i {
+    transition: color 0.3s ease;
+}
+
+.contato-section .contato-content a i:hover {
+    color: #007bff; /* Azul Escuro */
+}
+
+/* Animações */
+.hero-text, .section-title, .sobre-nos-content, .equipe-expectativa-content, .contato-content {
+    animation: fadeInUp 1s ease-in-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilos para o Swiper */
+.swiper-container {
+    width: 100%;
+    height: auto;
+    margin-bottom: 50px;
+}
+
+.swiper-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.swiper-slide {
+    width: 300px;
+    text-align: center;
+}}
+
+/* Estilos para o elemento de usuário logado */
+#usuario-logado {
+    display: none; /* Inicialmente, esconde o elemento */
+    position: absolute; /* Posicionamento absoluto dentro da header */
+    right: -900px; /* Posiciona 20px da borda direita */
+    top: 50%;  /* Centraliza verticalmente */
+    transform: translateY(-50%); /* Ajusta o centro vertical */
+    color: white; /* Define a cor do texto para branco */
+    font-weight: bold; /* Adiciona negrito ao texto */
+}
+
+.swiper-button-next::after{
+    margin-right: -20px;
+}
+

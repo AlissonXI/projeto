@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillMaster - Aprenda Novas Habilidades</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel="stylesheet" href="style.css"> 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXXXX-X"></script> 
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark">  
+                <a class="navbar-brand" href="#">
+                    <img src="logo.jpeg" alt="Logo da SkillMaster" height="100" width="100"> 
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#cursos-section">Cursos</a></li>
+                        <li class="nav-item" id="login-link"><a class="nav-link" data-toggle="modal" data-target="#loginModal">Login</a></li>
+                        <li class="nav-item" id="criar-conta-link"><a class="nav-link" data-toggle="modal" data-target="#criarContaModal">Criar Conta</a></li>
+                        <li class="nav-item" id="logout-link" style="display: none;"><a class="nav-link" href="#">Logout</a></li>
+                        <li class="nav-item" id="usuario-logado" style="display: none;">
+                            <span class="nav-link">Bem vindo(a), <span id="nome-usuario"></span></span> 
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 order-md-1 order-2">
+                    <h1 class="hero-title">Desperte seu Potencial!</h1>
+                    <p class="hero-text" id="hero-text">Encontre cursos online incríveis para impulsionar sua carreira e seus sonhos.</p>
+                    <a href="#cursos-section" class="btn btn-primary">Explore Cursos</a>
+                </div>
+                <div class="col-md-6 order-md-2 order-1">
+                    <img src="hero-image.jpg" alt="Imagem da Hero Section" class="hero-image lazy" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cursos-section" id="cursos-section">
+        <div class="container">
+            <h2 class="section-title">Nossos Cursos</h2>
+            <div class="swiper mySwiperCursos">
+                <div class="swiper-wrapper cursos-container" id="cursos-carousel-container"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sobre-nos-section" id="sobre-nos-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="section-title">Sobre Nós</h2>
+                    <div class="sobre-nos-content">
+                        <p>A SkillMaster é uma plataforma online de aprendizagem criada por alunos do 2° ano B do ensino médio da Escola Objetivo Lorena. Nossa missão é democratizar o acesso ao conhecimento, proporcionando uma experiência de aprendizado dinâmica e engajadora. Queremos conectar pessoas com as habilidades necessárias para construir um futuro brilhante.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="equipe-expectativa-section" id="equipe-expectativa-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="section-title">Expectativa da Equipe</h2>
+                    <div class="equipe-expectativa-content">
+                        <p>Estamos super animados com o lançamento da SkillMaster! Acreditamos que a plataforma vai revolucionar a forma como as pessoas aprendem, oferecendo cursos acessíveis, de alta qualidade e com foco na experiência do usuário.  Com a SkillMaster, queremos:</p>
+                        <ul>
+                            <li>Despertar a paixão pelo conhecimento em todos!</li>
+                            <li>Oferecer oportunidades de crescimento profissional para todos.</li>
+                            <li>Tornar o aprendizado online mais fácil e divertido.</li>
+                            <li>Empoderar pessoas com as habilidades necessárias para construir um futuro brilhante.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="depoimentos-section" id="depoimentos-section">
+        <div class="container">
+            <h2 class="section-title">O que nossos alunos dizem</h2>
+            <div class="swiper mySwiperDepoimentos">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="depoimento">
+                            <p>"A SkillMaster me ajudou a desenvolver minhas habilidades em programação, e agora me sinto mais confiante para buscar novas oportunidades." - <span class="nome-depoimento">João Silva</span></p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="depoimento">
+                            <p>"Os cursos online da SkillMaster são incríveis! O conteúdo é de alta qualidade e os professores são excelentes." - <span class="nome-depoimento">Maria Oliveira</span></p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="depoimento">
+                            <p>"Recomendo a SkillMaster para qualquer pessoa que busca aprender novas habilidades. A plataforma é completa e fácil de usar." - <span class="nome-depoimento">Pedro Santos</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contato-section" id="contato-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="section-title">Fale Conosco</h2>
+                    <p class="lead text-center">Tem alguma dúvida? Entre em contato!</p> 
+                    <div class="contato-content">
+                        <p class="text-center">Envie um email para: <a href="mailto:Skillmaster.projeto@gmail.com">Skillmaster.projeto@gmail.com</a></p>
+                        <div class="social-links">
+                            <a href="https://www.instagram.com/skillmaster.24?igsh=MTMzbGYyNDMycW0xcg==" target="_blank">
+                                <i class="fab fa-instagram" 
+                                   style="font-size: 4rem; margin-bottom: 10px; 
+                                          background: linear-gradient(to right, #fd5c61, #e559a4); 
+                                          -webkit-background-clip: text;
+                                          -webkit-text-fill-color: transparent;
+                                          transition: color 0.3s ease-in-out;" 
+                                   onmouseover="this.style.color='#007bff'" 
+                                   onmouseout="this.style.color='transparent'"></i>
+                              </a>
+                        </div>
+                        <p class="text-center">Contate-nos pelo Instagram</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2023 SkillMaster - Desenvolvido por alunos do 2° ano B do ensino médio da Escola Objetivo Lorena.</p>
+        </div>
+        <button id="scrollToTopButton" class="btn btn-primary"><i class="fas fa-arrow-up"></i></button>
+    </footer>
+
+    <!-- Modal de Login -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="form-login">
+                        <div class="form-group">
+                            <label for="email-login">Email</label>
+                            <input type="email" class="form-control" id="email-login" placeholder="Digite seu email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="senha-login">Senha</label>
+                            <input type="password" class="form-control" id="senha-login" placeholder="Digite sua senha" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Entrar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para criar conta -->
+    <div class="modal fade" id="criarContaModal" tabindex="-1" aria-labelledby="criarContaModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="criarContaModalLabel">Criar Conta</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="form-criar-conta">
+                        <div class="form-group">
+                            <label for="nome-criar-conta">Nome</label>
+                            <input type="text" class="form-control" id="nome-criar-conta" placeholder="Digite seu nome" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email-criar-conta">Email</label>
+                            <input type="email" class="form-control" id="email-criar-conta" placeholder="Digite seu email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="senha-criar-conta">Senha</label>
+                            <input type="password" class="form-control" id="senha-criar-conta" placeholder="Digite sua senha" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Criar Conta</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para detalhes do curso -->
+    <div class="modal fade" id="cursoModal" tabindex="-1" role="dialog" aria-labelledby="cursoModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cursoModalLabel"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div id="curso-detalhes"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.1/lazyload.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js"></script> 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
+    <script src="script.js"></script>
+</body>
+</html>
